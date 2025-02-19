@@ -14,7 +14,7 @@ class TopBar extends AppBar {
             automaticallyImplyLeading: false,
             title: H1(title ?? ''),
             centerTitle: false,
-            leading: onBack != null ? Back(onTap: onBack) : null,
+            leading: withBack ? Back(onTap: onBack) : null,
             backgroundColor: Colors.white,
             scrolledUnderElevation: 2
             );
