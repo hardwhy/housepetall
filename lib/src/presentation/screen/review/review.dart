@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:housepetall/src/presentation/widgets/widgets.dart';
 
 export 'routes.dart';
 
@@ -7,6 +8,10 @@ class ReviewScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Scaffold(
+      appBar: TopBar(
+        title: 'Our reviews',
+      ),
+    );
   }
 }

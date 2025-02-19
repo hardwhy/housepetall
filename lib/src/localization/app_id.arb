@@ -1,0 +1,19 @@
+{
+    "appTitle": "housepetall",
+    "@@locale": "id",
+    "@appTitle": {
+        "description": "The title of the application"
+    },
+    "reviewHome": "Ulasan",
+    "reviewHomeEmptyTitle": "Belum ada ulasan",
+    "reviewHomeEmptyDescription": "Jadi yang pertama mengulas kami!",
+    "reviewHomeSubmitButton": "Kirimkan ulasan",
+    "reviewDetailNameFormat": "Ulasan %s",
+    "reviewFormRatingLabel": "Rating",
+    "reviewFormNameLabel": "Nama",
+    "reviewFormPetNameLabel": "Name Perliharaan",
+    "reviewFormCommentLabel": "Komentar (opsional)",
+    "reviewFormSubmitButton": "Kirim",
+    "commonErrorTitle": "Terjadi kesalahan",
+    "commonErrorDescription": "Andai ada injury time. :("
+}

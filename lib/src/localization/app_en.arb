@@ -1,6 +1,19 @@
 {
   "appTitle": "housepetall",
+  "@@locale": "en",
   "@appTitle": {
     "description": "The title of the application"
-  }
+  },
+  "reviewHome": "Our reviews",
+  "reviewHomeEmptyTitle": "No reviews yet",
+  "reviewHomeEmptyDescription": "Be the first by clicking the button below!",
+  "reviewHomeSubmitButton": "Submit a review",
+  "reviewDetailNameFormat": "%s's review",
+  "reviewFormRatingLabel": "Rating",
+  "reviewFormNameLabel": "Name",
+  "reviewFormPetNameLabel": "Pets Name",
+  "reviewFormCommentLabel": "Comment (optional)",
+  "reviewFormSubmitButton": "Submit",
+  "commonErrorTitle": "Something went wrong",
+  "commonErrorDescription": "I wish I had enough time to finish this page. :("
 }

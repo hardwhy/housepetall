@@ -1,0 +1,1 @@
+export 'constants/locale.dart';

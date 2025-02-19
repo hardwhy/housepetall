@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:housepetall/src/app/routes.dart';
 import 'package:housepetall/src/app/routing.dart';
+import 'package:housepetall/src/common/common.dart';
+import 'package:housepetall/src/localization/languages.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({
@@ -14,16 +15,17 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       restorationScopeId: 'app',
       localizationsDelegates: const [
-        AppLocalizations.delegate,
         GlobalMaterialLocalizations.delegate,
         GlobalWidgetsLocalizations.delegate,
         GlobalCupertinoLocalizations.delegate,
+        HousePetAllLocalization.delegate,
       ],
-      supportedLocales: const [
-        Locale('en', ''), // English, no country code
+      supportedLocales: [
+        HousePetAllLocale.en,
+        HousePetAllLocale.id,
       ],
       onGenerateTitle: (BuildContext context) =>
-          AppLocalizations.of(context)!.appTitle,
+          HousePetAllLocalization.of(context)!.appTitle,
       theme: ThemeData(),
       darkTheme: ThemeData.dark(),
       onGenerateRoute: generateRoute,
