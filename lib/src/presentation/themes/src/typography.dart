@@ -216,12 +216,12 @@ class ButtonTitle extends Typography {
     switch (size) {
       case VariantSize.big:
         return GoogleFonts.nunito(
-          fontSize: 16,
+          fontSize: 18,
           fontWeight: FontWeight.bold,
         );
       default:
         return GoogleFonts.nunito(
-          fontSize: 14,
+          fontSize: 16,
           fontWeight: FontWeight.normal,
         );
     }
