@@ -1,1 +1,1 @@
-export 'constants/locale.dart';
+export 'constants/constants.dart';
