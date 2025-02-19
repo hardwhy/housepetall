@@ -11,10 +11,11 @@ class TopBar extends AppBar {
     this.withBack = true,
     this.onBack,
   }) : super(
-          automaticallyImplyLeading: false,
-          title: H1(title ?? ''),
-          centerTitle: false,
-          leading: onBack != null ? Back(onTap: onBack) : null,
-          elevation: 0,
-        );
+            automaticallyImplyLeading: false,
+            title: H1(title ?? ''),
+            centerTitle: false,
+            leading: onBack != null ? Back(onTap: onBack) : null,
+            backgroundColor: Colors.white,
+            scrolledUnderElevation: 2
+            );
 }
