@@ -1,11 +1,13 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:flutter/material.dart';
+import 'package:housepetall/src/common/util/color.dart';
 
 abstract class RippleWrapper extends StatelessWidget {
   final VoidCallback? onTap;
   final double? height;
   final double? width;
   final BoxDecoration? decoration;
+  final BoxConstraints? constraints;
   final Widget? child;
   final BorderRadius? rippleBorderRadius;
   final EdgeInsets? padding;
@@ -26,6 +28,7 @@ abstract class RippleWrapper extends StatelessWidget {
     this.margin,
     this.alignment,
     this.rippleColor,
+    this.constraints,
   });
 
   @protected
@@ -41,8 +44,9 @@ abstract class RippleWrapper extends StatelessWidget {
       Material(
         color: Colors.transparent,
         child: InkWell(
-          highlightColor: rippleColor ?? Colors.deepOrange[100],
-          splashColor: (rippleColor ?? Colors.deepOrange).withValues(),
+          highlightColor:
+              (rippleColor ?? Colors.deepOrange[100])!.adjustOpacity(.5),
+          splashColor: (rippleColor ?? Colors.deepOrange).adjustOpacity(.5),
           borderRadius: rippleBorderRadius ?? BorderRadius.circular(8),
           onTap: onTap,
           child: childContainer(context, child),
@@ -66,6 +70,7 @@ class Ripplify extends RippleWrapper {
     super.margin,
     super.rippleColor,
     super.alignment,
+    super.constraints,
   });
 
   @override
@@ -75,6 +80,7 @@ class Ripplify extends RippleWrapper {
       height: height,
       width: width,
       alignment: alignment,
+      constraints: constraints,
       child: child,
     );
   }
