@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:housepetall/src/presentation/themes/themes.dart';
-
+import 'package:housepetall/src/presentation/widgets/widgets.dart';
 
 class TopBar extends AppBar {
   final bool withBack;
@@ -12,8 +12,9 @@ class TopBar extends AppBar {
     this.onBack,
   }) : super(
           automaticallyImplyLeading: false,
-          title: H3(title ?? ''),
-          centerTitle: true,
+          title: H1(title ?? ''),
+          centerTitle: false,
+          leading: onBack != null ? Back(onTap: onBack) : null,
           elevation: 0,
         );
 }

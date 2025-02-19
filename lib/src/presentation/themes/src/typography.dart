@@ -71,12 +71,12 @@ class Body1 extends Typography {
     switch (variantStyle) {
       case VariantStyle.bold:
         return GoogleFonts.nunito(
-          fontSize: 16,
+          fontSize: 18,
           fontWeight: FontWeight.bold,
         );
       default:
         return GoogleFonts.nunito(
-          fontSize: 16,
+          fontSize: 18,
           fontWeight: FontWeight.normal,
         );
     }
@@ -136,7 +136,7 @@ class H1 extends Typography {
   @override
   TextStyle getTextStyle() {
     return GoogleFonts.nunito(
-      fontSize: 24,
+      fontSize: 26,
       fontWeight: FontWeight.bold,
     );
   }
@@ -155,7 +155,7 @@ class H2 extends Typography {
   @override
   TextStyle getTextStyle() {
     return GoogleFonts.nunito(
-      fontSize: 20,
+      fontSize: 24,
       fontWeight: FontWeight.bold,
     );
   }
@@ -174,7 +174,7 @@ class H3 extends Typography {
   @override
   TextStyle getTextStyle() {
     return GoogleFonts.nunito(
-      fontSize: 18,
+      fontSize: 20,
       fontWeight: FontWeight.bold,
     );
   }
