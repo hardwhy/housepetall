@@ -19,15 +19,13 @@ class ReviewScreen extends StatelessWidget {
         backgroundColor: Colors.white,
         appBar: TopBar(
           title: context.strings.reviewHome,
+          withBack: false,
         ),
         body: SizedBox(
           width: double.infinity,
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
-            children: const [
-              Expanded(child: ReviewList()),
-              ReviewFooter()
-            ],
+            children: const [Expanded(child: ReviewList()), ReviewFooter()],
           ),
         ),
       ),

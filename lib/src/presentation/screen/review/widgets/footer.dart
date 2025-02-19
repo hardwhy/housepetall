@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:housepetall/src/localization/localization.dart';
+import 'package:housepetall/src/presentation/screen/review/review.dart';
 import 'package:housepetall/src/presentation/themes/themes.dart';
 import 'package:housepetall/src/presentation/widgets/widgets.dart';
 
@@ -19,7 +20,9 @@ class ReviewFooter extends StatelessWidget {
       child: Knob(
         width: double.infinity,
         title: context.strings.reviewHomeSubmitButton,
-        onTap: () {},
+        onTap: () {
+          Navigator.pushNamed(context, ReviewRoutes.detail);
+        },
       ),
     );
   }
