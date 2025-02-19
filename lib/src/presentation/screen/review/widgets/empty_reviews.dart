@@ -8,14 +8,11 @@ class EmptyReviews extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Align(
-      alignment: Alignment(0, -.4),
-      child: Empty(
-        imageSize: 250,
-        imageAsset: ReviewAssetPath.empty,
-        title: context.strings.reviewHomeEmptyTitle,
-        description: context.strings.reviewHomeEmptyDescription,
-      ),
+    return Empty(
+      imageSize: 300,
+      imageAsset: ReviewAssetPath.empty,
+      title: context.strings.reviewHomeEmptyTitle,
+      description: context.strings.reviewHomeEmptyDescription,
     );
   }
 }
