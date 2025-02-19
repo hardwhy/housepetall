@@ -4,6 +4,7 @@ import 'package:housepetall/src/app/routes.dart';
 import 'package:housepetall/src/app/routing.dart';
 import 'package:housepetall/src/common/common.dart';
 import 'package:housepetall/src/localization/languages.dart';
+import 'package:housepetall/src/presentation/themes/src/theme_data.dart';
 import 'package:toastification/toastification.dart';
 
 class MyApp extends StatelessWidget {
@@ -28,8 +29,8 @@ class MyApp extends StatelessWidget {
         ],
         onGenerateTitle: (BuildContext context) =>
             HousePetAllLocalization.of(context)!.appTitle,
-        theme: ThemeData(),
-        darkTheme: ThemeData.dark(),
+        theme: HousePetAllThemes.basic,
+        darkTheme: HousePetAllThemes.darkBasic,
         onGenerateRoute: generateRoute,
         initialRoute: Routes.root,
       ),
