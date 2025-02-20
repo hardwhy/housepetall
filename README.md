@@ -1,29 +1,45 @@
-# housepetall
+# 📱 Housepetall Mobile App
 
-A new Flutter project.
+## 📌 Description
+Welcome to the **Housepetall Mobile App** repository! This project provides the Flutter-based mobile application for Housepetall, seamlessly integrating with the Housepetall API.
 
-## Getting Started
+## 🛠 Environment Setup
+### ✅ Prerequisites
+Ensure you have the following installed:
+- **Flutter (latest stable version)**
+- **Dart (compatible with your Flutter version)**
+- **Android Studio/Xcode (for Android/iOS development)**
 
-This project is a starting point for a Flutter application that follows the
-[simple app state management
-tutorial](https://flutter.dev/to/state-management-sample).
+### 🔧 Environment Variables
+Configure the required environment variables before running the project. The `HOST` should be set to your laptop's IP address for API access. Example:
+```bash
+class Config {
+  static const String host = 'your_laptop_ip_address';
+}
+```
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## 📥 Installation
+Clone the repository and install dependencies:
+```bash
+git clone git@github.com:hardwhy/housepetall.git #or https://github.com/hardwhy/housepetall.git
+code <project_directory> #if using VSCode
+flutter pub get
+```
 
-## Assets
+## 🚀 Running the Project Locally
+To run the Flutter app on an emulator or physical device:
+```bash
+flutter run
+```
+For Android:
+```bash
+flutter run -d android
+```
+For iOS:
+```bash
+flutter run -d ios
+```
 
-The `assets` directory houses images, fonts, and any other files you want to
-include with your application.
+## 📘 Additional Information
+For troubleshooting tips, contributions, or further details, check out the project documentation or open an issue. Happy coding! 🎉
 
-The `assets/images` directory contains [resolution-aware
-images](https://flutter.dev/to/resolution-aware-images).
-
-## Localization
-
-This project generates localized messages based on arb files found in
-the `lib/src/localization` directory.
-
-To support additional languages, please visit the tutorial on
-[Internationalizing Flutter apps](https://flutter.dev/to/internationalization).
