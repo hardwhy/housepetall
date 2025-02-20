@@ -21,7 +21,7 @@ class ReviewFooter extends StatelessWidget {
         width: double.infinity,
         title: context.strings.reviewHomeSubmitButton,
         onTap: () {
-          Navigator.pushNamed(context, ReviewRoutes.detail);
+          Navigator.pushNamed(context, ReviewRoutes.submit);
         },
       ),
     );
