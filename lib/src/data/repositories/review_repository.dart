@@ -1,5 +1,4 @@
 import 'package:housepetall/src/data/data.dart';
-import 'package:housepetall/src/data/datasources/remote/review_remote_data_source.dart';
 import 'package:housepetall/src/domain/entities/review.dart';
 import 'package:housepetall/src/domain/repositories/review_repository.dart';
 
