@@ -197,6 +197,36 @@ abstract class HousePetAllLocalization {
   /// **'This field is required'**
   String get reviewFormRequiredError;
 
+  /// No description provided for @reviewFormSucceedSubmitTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Review has been submitted'**
+  String get reviewFormSucceedSubmitTitle;
+
+  /// No description provided for @reviewFormSucceedSubmitButtonTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Go Home'**
+  String get reviewFormSucceedSubmitButtonTitle;
+
+  /// No description provided for @reviewFormSucceedSubmitMessage.
+  ///
+  /// In en, this message translates to:
+  /// **'Your review is meaningful for us!'**
+  String get reviewFormSucceedSubmitMessage;
+
+  /// No description provided for @reviewFormFailedSubmitMessage.
+  ///
+  /// In en, this message translates to:
+  /// **'Please try to re-submit!'**
+  String get reviewFormFailedSubmitMessage;
+
+  /// No description provided for @reviewFormFailedSubmitButtonTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Close'**
+  String get reviewFormFailedSubmitButtonTitle;
+
   /// No description provided for @commonErrorTitle.
   ///
   /// In en, this message translates to:

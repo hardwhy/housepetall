@@ -58,6 +58,21 @@ class HousePetAllLocalizationId extends HousePetAllLocalization {
   String get reviewFormRequiredError => 'Bagian ini perlu diisi';
 
   @override
+  String get reviewFormSucceedSubmitTitle => 'Review has been submitted';
+
+  @override
+  String get reviewFormSucceedSubmitButtonTitle => 'Go Home';
+
+  @override
+  String get reviewFormSucceedSubmitMessage => 'Your review is meaningful for us!';
+
+  @override
+  String get reviewFormFailedSubmitMessage => 'Please try to re-submit!';
+
+  @override
+  String get reviewFormFailedSubmitButtonTitle => 'Close';
+
+  @override
   String get commonErrorTitle => 'Terjadi kesalahan';
 
   @override

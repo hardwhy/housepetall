@@ -1,11 +1,12 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 import 'package:housepetall/src/domain/domain.dart';
 import 'package:housepetall/src/localization/localization.dart';
 import 'package:housepetall/src/presentation/layouts/src/basic.dart';
-import 'package:housepetall/src/presentation/screen/review/widgets/footer.dart';
-import 'package:housepetall/src/presentation/screen/review/widgets/rating.dart';
+import 'package:housepetall/src/presentation/screen/review/cubits/review_submission/review_submission_cubit.dart';
+import 'package:housepetall/src/presentation/screen/review/widgets/widgets.dart';
 import 'package:housepetall/src/presentation/widgets/widgets.dart';
 
 class DirtyFormState {
@@ -40,14 +41,40 @@ class DirtyFormState {
       'DirtyFormState(defaultValues: $defaultValues, values: $values)';
 }
 
-class ReviewSubmission extends StatefulWidget {
+class ReviewSubmission extends StatelessWidget {
   const ReviewSubmission({super.key});
 
   @override
-  State<ReviewSubmission> createState() => _ReviewSubmissionState();
+  Widget build(BuildContext context) {
+    return BlocProvider(
+      create: (context) => ReviewSubmissionCubit(),
+      child: BlocListener<ReviewSubmissionCubit, ReviewSubmissionState>(
+        listener: (context, state) {
+          if (state.isLoading) {
+            showLoadingModal(context: context);
+          }
+          if (state.isSucceed) {
+            Navigator.pop(context);
+            showFailedSubmissionSheet(context: context);
+          }
+          if (state.isFailed) {
+            Navigator.pop(context);
+            showFailedSubmissionSheet(context: context);
+          }
+        },
+        child: const _ReviewSubmission(),
+      ),
+    );
+  }
 }
 
-class _ReviewSubmissionState extends State<ReviewSubmission> {
+class _ReviewSubmission extends StatefulWidget {
+  const _ReviewSubmission();
+  @override
+  State<_ReviewSubmission> createState() => _ReviewSubmissionState();
+}
+
+class _ReviewSubmissionState extends State<_ReviewSubmission> {
   late GlobalKey<FormState> _formKey;
   late TextEditingController _nameController;
   late TextEditingController _petNameController;
@@ -55,7 +82,7 @@ class _ReviewSubmissionState extends State<ReviewSubmission> {
   late int _rating;
   late ValueNotifier<DirtyFormState> _dirty;
 
-  Review get reviewValues => _dirty.value.values;
+  Review get _reviewValues => _dirty.value.values;
 
   @override
   void initState() {
@@ -80,15 +107,16 @@ class _ReviewSubmissionState extends State<ReviewSubmission> {
 
   _initListener() {
     _nameController.addListener(() {
-      _updateDirtyValue(reviewValues.copyWith(ownerName: _nameController.text));
+      _updateDirtyValue(
+          _reviewValues.copyWith(ownerName: _nameController.text));
     });
     _commentController.addListener(() {
       _updateDirtyValue(
-          reviewValues.copyWith(comment: _commentController.text));
+          _reviewValues.copyWith(comment: _commentController.text));
     });
     _petNameController.addListener(() {
       _updateDirtyValue(
-          reviewValues.copyWith(petName: _petNameController.text));
+          _reviewValues.copyWith(petName: _petNameController.text));
     });
   }
 
@@ -107,7 +135,7 @@ class _ReviewSubmissionState extends State<ReviewSubmission> {
 
   void _submitForm() {
     if (_formKey.currentState!.validate()) {
-      //todo: add cubit call
+      context.reviewSubmissionCubit.submitReview(_reviewValues);
     }
   }
 
@@ -138,7 +166,7 @@ class _ReviewSubmissionState extends State<ReviewSubmission> {
               margin: const EdgeInsets.only(bottom: 24),
               child: Rating.input(
                 onTap: (value) {
-                  _updateDirtyValue(reviewValues.copyWith(rating: value));
+                  _updateDirtyValue(_reviewValues.copyWith(rating: value));
                 },
               ),
             ),

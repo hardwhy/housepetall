@@ -8,6 +8,7 @@ class _ReviewAssetPath {
   String get root => 'assets/images/reviews';
   String get empty => '$root/empty.svg';
   String get detail => '$root/detail.svg';
+  String get success => '$root/success.svg';
 }
 
 class _ReviewHeroTags {
