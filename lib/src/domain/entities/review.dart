@@ -5,12 +5,16 @@ class Review {
   final String petName;
   final String? comment;
   final String? id;
+  final DateTime? createdAt;
+  final DateTime? updatedAt;
   Review({
     required this.rating,
     required this.ownerName,
     required this.petName,
     this.comment,
     this.id,
+    this.createdAt,
+    this.updatedAt,
   });
 
   Review copyWith({
@@ -18,12 +22,18 @@ class Review {
     String? ownerName,
     String? petName,
     String? comment,
+    String? id,
+    DateTime? createdAt,
+    DateTime? updatedAt,
   }) {
     return Review(
       rating: rating ?? this.rating,
       ownerName: ownerName ?? this.ownerName,
       petName: petName ?? this.petName,
       comment: comment ?? this.comment,
+      id: id ?? this.id,
+      createdAt: createdAt ?? this.createdAt,
+      updatedAt: updatedAt ?? this.updatedAt,
     );
   }
 
@@ -35,21 +45,20 @@ class Review {
   @override
   bool operator ==(covariant Review other) {
     if (identical(this, other)) return true;
-  
-    return 
-      other.rating == rating &&
-      other.ownerName == ownerName &&
-      other.petName == petName &&
-      other.comment == comment &&
-      other.id == id;
+
+    return other.rating == rating &&
+        other.ownerName == ownerName &&
+        other.petName == petName &&
+        other.comment == comment &&
+        other.id == id;
   }
 
   @override
   int get hashCode {
     return rating.hashCode ^
-      ownerName.hashCode ^
-      petName.hashCode ^
-      comment.hashCode ^
-      id.hashCode;
+        ownerName.hashCode ^
+        petName.hashCode ^
+        comment.hashCode ^
+        id.hashCode;
   }
 }
