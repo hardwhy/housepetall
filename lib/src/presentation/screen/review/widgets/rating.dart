@@ -41,7 +41,7 @@ class _RatingState extends State<Rating> {
       crossAxisAlignment: CrossAxisAlignment.start,
       mainAxisSize: MainAxisSize.min,
       children: [
-        if (_isInput) ...[Body1.bold('Rating'), SizedBox(height: 16)],
+        if (_isInput) ...[Paragraph.bold('Rating'), SizedBox(height: 16)],
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: List.generate(5, (index) {
