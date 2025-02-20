@@ -9,6 +9,8 @@ class Input extends StatelessWidget {
   final bool mandatory;
   final int? maxLine;
   final int minLine;
+  final String? Function(String? value)? validator;
+  final TextEditingController? controller;
   const Input({
     super.key,
     this.label,
@@ -16,6 +18,8 @@ class Input extends StatelessWidget {
     this.mandatory = false,
     this.maxLine = 1,
     this.minLine = 1,
+    this.validator,
+    this.controller,
   });
 
   @override
@@ -45,19 +49,19 @@ class Input extends StatelessWidget {
               ],
             ),
           ),
-        SizedBox(
-          height: minLine == 1 && maxLine == null || maxLine == 1 ? 40 : null,
-          child: TextFormField(
-            minLines: minLine,
-            maxLines: maxLine,
-            decoration: InputDecoration(
-              contentPadding: const EdgeInsets.symmetric(
-                horizontal: 8,
-                vertical: 4,
-              ),
-              fillColor: Colors.deepOrange[50]!.adjustOpacity(.7),
-              hintText: placeholder,
+        TextFormField(
+          autovalidateMode: AutovalidateMode.onUserInteraction,
+          controller: controller,
+          minLines: minLine,
+          maxLines: maxLine,
+          validator: validator,
+          decoration: InputDecoration(
+            contentPadding: const EdgeInsets.symmetric(
+              horizontal: 8,
+              vertical: 4,
             ),
+            fillColor: Colors.deepOrange[50]!.adjustOpacity(.7),
+            hintText: placeholder,
           ),
         ),
       ],

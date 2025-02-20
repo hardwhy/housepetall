@@ -1,17 +1,14 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:flutter/material.dart';
-
-import 'package:housepetall/src/localization/localization.dart';
-import 'package:housepetall/src/presentation/screen/review/routes.dart';
 import 'package:housepetall/src/presentation/themes/themes.dart';
 import 'package:housepetall/src/presentation/widgets/widgets.dart';
 
 class ReviewFooter extends StatelessWidget {
-  final VoidCallback onTap;
+  final VoidCallback? onTap;
   final String title;
   const ReviewFooter({
     super.key,
-    required this.onTap,
+    this.onTap,
     required this.title,
   });
 
