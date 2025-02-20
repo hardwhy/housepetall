@@ -35,7 +35,8 @@ class ReviewContent extends StatelessWidget {
       mainAxisSize: MainAxisSize.min,
       children: [
         HeaderSection(prop: prop),
-        if (_review.comment != null) Flexible(child: CommentSection(prop: prop))
+        if (_review.comment?.isNotEmpty ?? false)
+          Flexible(child: CommentSection(prop: prop))
       ],
     );
   }
@@ -61,10 +62,14 @@ class CommentSection extends StatelessWidget {
         const Divider(),
         const SizedBox(height: 8),
         Flexible(
-          child: Paragraph(
-            _comment,
-            maxLines: _compactMode ? 2 : null,
-            overflow: _compactMode ? TextOverflow.ellipsis : null,
+          child: SizedBox(
+            width: double.infinity,
+            child: Paragraph(
+              _comment,
+              align: TextAlign.start,
+              maxLines: _compactMode ? 2 : null,
+              overflow: _compactMode ? TextOverflow.ellipsis : null,
+            ),
           ),
         )
       ],
@@ -84,6 +89,7 @@ class HeaderSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    print(_review);
     return Hero(
       tag: sprintf(
         ReviewConstants.heroTags.reviewContent,
