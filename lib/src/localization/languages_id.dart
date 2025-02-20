@@ -31,17 +31,35 @@ class HousePetAllLocalizationId extends HousePetAllLocalization {
   String get reviewFormNameLabel => 'Nama';
 
   @override
-  String get reviewFormPetNameLabel => 'Name Perliharaan';
+  String get reviewFormPetNameLabel => 'Nama Perliharaan';
 
   @override
-  String get reviewFormCommentLabel => 'Komentar (opsional)';
+  String get reviewFormCommentLabel => 'Komentar';
 
   @override
   String get reviewFormSubmitButton => 'Kirim';
+
+  @override
+  String get reviewFormTitle => 'Berikan Ulasan';
+
+  @override
+  String get reviewFormNamePlaceHolder => 'Nama kamu';
+
+  @override
+  String get reviewFormPetsNamePlaceHolder => 'contoh: Garfield';
+
+  @override
+  String get reviewFormCommentPlaceHolder => 'Komentarmu kita harepin lho!';
+
+  @override
+  String get reviewFormPetsNameLabel => 'Nama Peliharaan';
 
   @override
   String get commonErrorTitle => 'Terjadi kesalahan';
 
   @override
   String get commonErrorDescription => 'Andai ada injury time. :(';
+
+  @override
+  String get commonOptionalLabel => '(opsional)';
 }

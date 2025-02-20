@@ -34,14 +34,32 @@ class HousePetAllLocalizationEn extends HousePetAllLocalization {
   String get reviewFormPetNameLabel => 'Pets Name';
 
   @override
-  String get reviewFormCommentLabel => 'Comment (optional)';
+  String get reviewFormCommentLabel => 'Comment';
 
   @override
   String get reviewFormSubmitButton => 'Submit';
+
+  @override
+  String get reviewFormTitle => 'Give a Review';
+
+  @override
+  String get reviewFormNamePlaceHolder => 'Your name';
+
+  @override
+  String get reviewFormPetsNamePlaceHolder => 'ex: Garfield';
+
+  @override
+  String get reviewFormCommentPlaceHolder => 'Any additional comments and much appreciated!';
+
+  @override
+  String get reviewFormPetsNameLabel => 'Pet\'s Name';
 
   @override
   String get commonErrorTitle => 'Something went wrong';
 
   @override
   String get commonErrorDescription => 'I wish I had enough time to finish this page. :(';
+
+  @override
+  String get commonOptionalLabel => '(optional)';
 }

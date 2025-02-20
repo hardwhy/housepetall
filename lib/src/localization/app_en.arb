@@ -12,8 +12,16 @@
   "reviewFormRatingLabel": "Rating",
   "reviewFormNameLabel": "Name",
   "reviewFormPetNameLabel": "Pets Name",
-  "reviewFormCommentLabel": "Comment (optional)",
+  "reviewFormCommentLabel": "Comment",
   "reviewFormSubmitButton": "Submit",
+  "reviewFormTitle": "Give a Review",
+  "reviewFormNamePlaceHolder": "Your name",
+  "reviewFormPetsNamePlaceHolder": "ex: Garfield",
+  "reviewFormCommentPlaceHolder": "Any additional comments and much appreciated!",
+  "reviewFormNameLabel": "Name",
+  "reviewFormPetsNameLabel": "Pet's Name",
+  "reviewFormCommentLabel": "Comment",
   "commonErrorTitle": "Something went wrong",
-  "commonErrorDescription": "I wish I had enough time to finish this page. :("
+  "commonErrorDescription": "I wish I had enough time to finish this page. :(",
+  "commonOptionalLabel": "(optional)"
 }

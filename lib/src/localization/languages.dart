@@ -152,7 +152,7 @@ abstract class HousePetAllLocalization {
   /// No description provided for @reviewFormCommentLabel.
   ///
   /// In en, this message translates to:
-  /// **'Comment (optional)'**
+  /// **'Comment'**
   String get reviewFormCommentLabel;
 
   /// No description provided for @reviewFormSubmitButton.
@@ -160,6 +160,36 @@ abstract class HousePetAllLocalization {
   /// In en, this message translates to:
   /// **'Submit'**
   String get reviewFormSubmitButton;
+
+  /// No description provided for @reviewFormTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Give a Review'**
+  String get reviewFormTitle;
+
+  /// No description provided for @reviewFormNamePlaceHolder.
+  ///
+  /// In en, this message translates to:
+  /// **'Your name'**
+  String get reviewFormNamePlaceHolder;
+
+  /// No description provided for @reviewFormPetsNamePlaceHolder.
+  ///
+  /// In en, this message translates to:
+  /// **'ex: Garfield'**
+  String get reviewFormPetsNamePlaceHolder;
+
+  /// No description provided for @reviewFormCommentPlaceHolder.
+  ///
+  /// In en, this message translates to:
+  /// **'Any additional comments and much appreciated!'**
+  String get reviewFormCommentPlaceHolder;
+
+  /// No description provided for @reviewFormPetsNameLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Pet\'s Name'**
+  String get reviewFormPetsNameLabel;
 
   /// No description provided for @commonErrorTitle.
   ///
@@ -172,6 +202,12 @@ abstract class HousePetAllLocalization {
   /// In en, this message translates to:
   /// **'I wish I had enough time to finish this page. :('**
   String get commonErrorDescription;
+
+  /// No description provided for @commonOptionalLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'(optional)'**
+  String get commonOptionalLabel;
 }
 
 class _HousePetAllLocalizationDelegate extends LocalizationsDelegate<HousePetAllLocalization> {

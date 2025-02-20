@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:housepetall/src/presentation/screen/errors/not_found.dart';
 import 'package:housepetall/src/presentation/screen/review/pages/review.dart';
 import 'package:housepetall/src/presentation/screen/review/pages/review_detail.dart';
+import 'package:housepetall/src/presentation/screen/review/pages/review_submission.dart';
 
 import 'routes.dart';
 
@@ -20,6 +21,7 @@ MaterialPageRoute<void> generateRoute(RouteSettings routeSettings) {
           arguments as ReviewDetailProp;
           return ReviewDetail(prop: arguments);
         case ReviewRoutes.submit:
+          return const ReviewSubmission();
         default:
           return ErrorScreen();
       }

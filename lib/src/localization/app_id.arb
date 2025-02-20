@@ -11,9 +11,17 @@
     "reviewDetailNameFormat": "Ulasan %s",
     "reviewFormRatingLabel": "Rating",
     "reviewFormNameLabel": "Nama",
-    "reviewFormPetNameLabel": "Name Perliharaan",
+    "reviewFormPetNameLabel": "Nama Perliharaan",
     "reviewFormCommentLabel": "Komentar (opsional)",
     "reviewFormSubmitButton": "Kirim",
+    "reviewFormNamePlaceHolder": "Nama kamu",
+    "reviewFormPetsNamePlaceHolder": "contoh: Garfield",
+    "reviewFormCommentPlaceHolder": "Komentarmu kita harepin lho!",
+    "reviewFormNameLabel": "Nama",
+    "reviewFormPetsNameLabel": "Nama Peliharaan",
+    "reviewFormCommentLabel": "Komentar",
+    "reviewFormTitle": "Berikan Ulasan",
     "commonErrorTitle": "Terjadi kesalahan",
-    "commonErrorDescription": "Andai ada injury time. :("
+    "commonErrorDescription": "Andai ada injury time. :(",
+    "commonOptionalLabel": "(opsional)"
 }
