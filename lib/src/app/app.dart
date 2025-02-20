@@ -32,7 +32,7 @@ class MyApp extends StatelessWidget {
           onGenerateTitle: (BuildContext context) =>
               HousePetAllLocalization.of(context)!.appTitle,
           theme: HousePetAllThemes.basic,
-          darkTheme: HousePetAllThemes.darkBasic,
+          // darkTheme: HousePetAllThemes.darkBasic,
           onGenerateRoute: generateRoute,
           initialRoute: Routes.root,
         ),
