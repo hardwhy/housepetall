@@ -176,8 +176,14 @@ class _ReviewSubmissionState extends State<_ReviewSubmission> {
             children: [
               Container(
                 margin: const EdgeInsets.only(bottom: 24),
-                child: Rating.input(
-                  onTap: (value) {
+                child: RatingFormField(
+                  validator: (value) {
+                    if (value == null || value <= 0) {
+                      return context.strings.reviewFormRequiredError;
+                    }
+                    return null;
+                  },
+                  onSaved: (value) {
                     _updateDirtyValue(_reviewValues.copyWith(rating: value));
                   },
                 ),
