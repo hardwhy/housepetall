@@ -2,7 +2,7 @@ import 'package:housepetall/src/domain/domain.dart';
 
 class ReviewModel extends Review {
   ReviewModel({
-    String? id,
+    super.id,
     required super.ownerName,
     required super.petName,
     required super.rating,
