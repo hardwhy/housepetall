@@ -20,6 +20,7 @@
     "reviewFormNameLabel": "Nama",
     "reviewFormPetsNameLabel": "Nama Peliharaan",
     "reviewFormCommentLabel": "Komentar",
+    "reviewFormRequiredError": "Bagian ini perlu diisi",
     "reviewFormTitle": "Berikan Ulasan",
     "commonErrorTitle": "Terjadi kesalahan",
     "commonErrorDescription": "Andai ada injury time. :(",

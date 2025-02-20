@@ -55,6 +55,9 @@ class HousePetAllLocalizationId extends HousePetAllLocalization {
   String get reviewFormPetsNameLabel => 'Nama Peliharaan';
 
   @override
+  String get reviewFormRequiredError => 'Bagian ini perlu diisi';
+
+  @override
   String get commonErrorTitle => 'Terjadi kesalahan';
 
   @override

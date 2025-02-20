@@ -191,6 +191,12 @@ abstract class HousePetAllLocalization {
   /// **'Pet\'s Name'**
   String get reviewFormPetsNameLabel;
 
+  /// No description provided for @reviewFormRequiredError.
+  ///
+  /// In en, this message translates to:
+  /// **'This field is required'**
+  String get reviewFormRequiredError;
+
   /// No description provided for @commonErrorTitle.
   ///
   /// In en, this message translates to:

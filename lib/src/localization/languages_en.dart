@@ -55,6 +55,9 @@ class HousePetAllLocalizationEn extends HousePetAllLocalization {
   String get reviewFormPetsNameLabel => 'Pet\'s Name';
 
   @override
+  String get reviewFormRequiredError => 'This field is required';
+
+  @override
   String get commonErrorTitle => 'Something went wrong';
 
   @override

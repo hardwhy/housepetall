@@ -21,6 +21,7 @@
   "reviewFormNameLabel": "Name",
   "reviewFormPetsNameLabel": "Pet's Name",
   "reviewFormCommentLabel": "Comment",
+  "reviewFormRequiredError": "This field is required",
   "commonErrorTitle": "Something went wrong",
   "commonErrorDescription": "I wish I had enough time to finish this page. :(",
   "commonOptionalLabel": "(optional)"
