@@ -29,7 +29,7 @@ class ReviewRemoteDataSourceImpl extends ReviewRemoteDataSource
   @override
   Future<List<ReviewModel>> getReviews() async {
     return exec<List<ReviewModel>>(() async {
-      final response = await dio.get(Endpoints.review.createReviews);
+      final response = await dio.get(Endpoints.review.getReviews);
       final List jsons = response.data['reviews'];
 
       final result = jsons.map((json) => ReviewModel.fromJson(json)).toList();
