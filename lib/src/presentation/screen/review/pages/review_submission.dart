@@ -171,49 +171,52 @@ class _ReviewSubmissionState extends State<_ReviewSubmission> {
           }),
       child: Form(
         key: _formKey,
-        child: Column(
-          children: [
-            Container(
-              margin: const EdgeInsets.only(bottom: 24),
-              child: Rating.input(
-                onTap: (value) {
-                  _updateDirtyValue(_reviewValues.copyWith(rating: value));
-                },
-              ),
-            ),
-            Row(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Expanded(
-                  child: Input(
-                    controller: _nameController,
-                    label: context.strings.reviewFormNameLabel,
-                    mandatory: true,
-                    placeholder: context.strings.reviewFormNamePlaceHolder,
-                    validator: _validateRequiredField,
-                  ),
+        child: SingleChildScrollView(
+          child: Column(
+            children: [
+              Container(
+                margin: const EdgeInsets.only(bottom: 24),
+                child: Rating.input(
+                  onTap: (value) {
+                    _updateDirtyValue(_reviewValues.copyWith(rating: value));
+                  },
                 ),
-                SizedBox(width: 16),
-                Expanded(
-                  child: Input(
-                    controller: _petNameController,
-                    label: context.strings.reviewFormPetsNameLabel,
-                    mandatory: true,
-                    placeholder: context.strings.reviewFormPetsNamePlaceHolder,
-                    validator: _validateRequiredField,
+              ),
+              Row(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Expanded(
+                    child: Input(
+                      controller: _nameController,
+                      label: context.strings.reviewFormNameLabel,
+                      mandatory: true,
+                      placeholder: context.strings.reviewFormNamePlaceHolder,
+                      validator: _validateRequiredField,
+                    ),
                   ),
-                )
-              ],
-            ),
-            SizedBox(height: 24),
-            Input(
-              controller: _commentController,
-              label: context.strings.reviewFormCommentLabel,
-              placeholder: context.strings.reviewFormCommentPlaceHolder,
-              minLine: 5,
-              maxLine: null,
-            ),
-          ],
+                  SizedBox(width: 16),
+                  Expanded(
+                    child: Input(
+                      controller: _petNameController,
+                      label: context.strings.reviewFormPetsNameLabel,
+                      mandatory: true,
+                      placeholder:
+                          context.strings.reviewFormPetsNamePlaceHolder,
+                      validator: _validateRequiredField,
+                    ),
+                  )
+                ],
+              ),
+              SizedBox(height: 24),
+              Input(
+                controller: _commentController,
+                label: context.strings.reviewFormCommentLabel,
+                placeholder: context.strings.reviewFormCommentPlaceHolder,
+                minLine: 5,
+                maxLine: null,
+              ),
+            ],
+          ),
         ),
       ),
     );
