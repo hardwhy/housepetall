@@ -4,17 +4,25 @@ part of 'review_list_cubit.dart';
 
 class ReviewListState extends StateFlag {
   final List<Review> reviews;
+  final String? message;
+  final String? title;
   ReviewListState({
-    this.reviews = const [],
     State state = State.init,
-  }): super(state);
+    this.reviews = const [],
+    this.message,
+    this.title,
+  }) : super(state);
 
   ReviewListState copyWith({
     List<Review>? reviews,
+    String? message,
+    String? title,
     State? state,
   }) {
     return ReviewListState(
       reviews: reviews ?? this.reviews,
+      message: message ?? this.message,
+      title: title ?? this.title,
       state: state ?? this.state,
     );
   }
@@ -22,10 +30,13 @@ class ReviewListState extends StateFlag {
   @override
   bool operator ==(covariant ReviewListState other) {
     if (identical(this, other)) return true;
-
-    return listEquals(other.reviews, reviews) && other.state == state;
+  
+    return 
+      listEquals(other.reviews, reviews) &&
+      other.message == message &&
+      other.title == title;
   }
 
   @override
-  int get hashCode => reviews.hashCode ^ state.hashCode;
+  int get hashCode => reviews.hashCode ^ message.hashCode ^ title.hashCode;
 }
