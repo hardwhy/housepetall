@@ -33,10 +33,10 @@ class ReviewDetail extends StatelessWidget {
       child: Stack(
         children: [
           Align(
-            alignment: Alignment.center,
+            alignment: Alignment.bottomCenter,
             child: SvgPicture.asset(
               ReviewConstants.assets.detail,
-              width: 300,
+              width: 200,
               colorFilter: ColorFilter.mode(
                 Colors.white.adjustOpacity(.9),
                 BlendMode.srcATop,
@@ -45,8 +45,7 @@ class ReviewDetail extends StatelessWidget {
           ),
           Positioned.fill(
             child: ReviewContent(
-              prop:
-                  ReviewContentProp(review: prop.review, compactMode: false),
+              prop: ReviewContentProp(review: prop.review, compactMode: false),
             ),
           ),
         ],
