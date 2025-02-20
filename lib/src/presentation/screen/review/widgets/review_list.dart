@@ -5,6 +5,7 @@ import 'package:housepetall/src/presentation/screen/review/cubits/review_list/re
 import 'package:housepetall/src/presentation/screen/review/widgets/empty_reviews.dart';
 import 'package:housepetall/src/presentation/screen/review/widgets/review_card.dart';
 import 'package:housepetall/src/presentation/themes/themes.dart';
+import 'package:skeletonizer/skeletonizer.dart';
 import 'package:toastification/toastification.dart';
 
 class ReviewList extends StatelessWidget {
@@ -32,11 +33,10 @@ class ReviewList extends StatelessWidget {
           return ListView.separated(
             padding: const EdgeInsets.fromLTRB(24, 24, 24, 50),
             itemBuilder: (context, index) {
-              final review = reviews.elementAt(index);
-              return ReviewCard(review: review);
+              return LoadingReviewCard();
             },
             separatorBuilder: (context, index) => SizedBox(height: 16),
-            itemCount: reviews.length,
+            itemCount: 5,
           );
         }
         if (state.isSucceed && reviews.isNotEmpty) {

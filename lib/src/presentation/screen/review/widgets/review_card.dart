@@ -14,35 +14,81 @@ class LoadingReviewCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Skeleton.leaf(
+    return Skeletonizer(
       enabled: true,
+      effect: ShimmerEffect(
+        baseColor: Colors.deepOrange[50]!,
+        highlightColor: Colors.white,
+      ),
       child: Container(
         decoration: BoxDecoration(
           color: Colors.white,
           borderRadius: BorderRadius.circular(16),
           boxShadow: Shadows.elevation2(color: Colors.black38),
         ),
+        constraints: BoxConstraints(maxHeight: 170),
+        padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 16),
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    SizedBox(width: 100, height: 20),
-                    SizedBox(width: 100, height: 20)
+                    Row(
+                      children: [
+                        CircleAvatar(
+                          radius: 15,
+                          backgroundColor: Colors.deepOrange[50],
+                        ),
+                        SizedBox(width: 8),
+                        Container(
+                          width: 120,
+                          height: 16,
+                          color: Colors.grey, // Will be skeletonized
+                        ),
+                      ],
+                    ),
+                    const SizedBox(height: 4),
+                    Row(
+                      children: [
+                        CircleAvatar(
+                          radius: 15,
+                          backgroundColor: Colors.deepOrange[50],
+                        ),
+                        SizedBox(width: 8),
+                        Container(
+                          width: 120,
+                          height: 16,
+                          color: Colors.grey, // Will be skeletonized
+                        ),
+                      ],
+                    ),
                   ],
                 ),
-                SizedBox(width: 100, height: 20)
+                Container(
+                  width: 120,
+                  height: 16,
+                  color: Colors.grey, // Will be skeletonized
+                )
               ],
             ),
-            Divider(
-              color: Colors.deepOrange[50],
+            // const SizedBox(height: 16),
+            Divider(color: Colors.deepOrange[50]),
+            const SizedBox(height: 16),
+            Container(
+              width: double.infinity,
+              height: 16,
+              color: Colors.grey, // Will be skeletonized
             ),
-            Column(
-              children: [
-                SizedBox(width: 100, height: 20),
-                SizedBox(width: 100, height: 20)
-              ],
+            const SizedBox(height: 8),
+            Container(
+              width: double.infinity,
+              height: 16,
+              color: Colors.grey, // Will be skeletonized
             ),
           ],
         ),
