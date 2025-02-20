@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:housepetall/src/localization/localization.dart';
-import 'package:housepetall/src/presentation/screen/review/review.dart';
+import 'package:housepetall/src/presentation/screen/review/routes.dart';
 import 'package:housepetall/src/presentation/themes/themes.dart';
 import 'package:housepetall/src/presentation/widgets/widgets.dart';
 

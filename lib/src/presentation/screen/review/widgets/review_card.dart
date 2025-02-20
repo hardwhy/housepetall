@@ -2,8 +2,8 @@
 import 'package:flutter/material.dart';
 
 import 'package:housepetall/src/domain/domain.dart';
-import 'package:housepetall/src/presentation/screen/review/review.dart';
-import 'package:housepetall/src/presentation/screen/review/review_detail.dart';
+import 'package:housepetall/src/presentation/screen/review/pages/review.dart';
+import 'package:housepetall/src/presentation/screen/review/pages/review_detail.dart';
 import 'package:housepetall/src/presentation/screen/review/widgets/review_content.dart';
 import 'package:housepetall/src/presentation/themes/themes.dart';
 import 'package:housepetall/src/presentation/widgets/widgets.dart';

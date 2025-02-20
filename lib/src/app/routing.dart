@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:housepetall/src/presentation/screen/errors/not_found.dart';
-import 'package:housepetall/src/presentation/screen/review/review.dart';
-import 'package:housepetall/src/presentation/screen/review/review_detail.dart';
+import 'package:housepetall/src/presentation/screen/review/pages/review.dart';
+import 'package:housepetall/src/presentation/screen/review/pages/review_detail.dart';
 
 import 'routes.dart';
 

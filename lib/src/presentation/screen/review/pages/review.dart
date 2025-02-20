@@ -6,7 +6,7 @@ import 'package:housepetall/src/presentation/screen/review/widgets/footer.dart';
 import 'package:housepetall/src/presentation/screen/review/widgets/review_list.dart';
 import 'package:housepetall/src/presentation/widgets/widgets.dart';
 
-export 'routes.dart';
+export '../routes.dart';
 
 class ReviewScreen extends StatelessWidget {
   const ReviewScreen({super.key});
