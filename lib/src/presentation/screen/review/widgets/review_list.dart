@@ -4,6 +4,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:housepetall/src/presentation/screen/review/cubits/review_list/review_list_cubit.dart';
 import 'package:housepetall/src/presentation/screen/review/widgets/empty_reviews.dart';
 import 'package:housepetall/src/presentation/screen/review/widgets/review_card.dart';
+import 'package:housepetall/src/presentation/themes/themes.dart';
 import 'package:toastification/toastification.dart';
 
 class ReviewList extends StatelessWidget {
@@ -13,29 +14,31 @@ class ReviewList extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocConsumer<ReviewListCubit, ReviewListState>(
       listener: (context, state) {
-        if (state.isSucceed) {
+        if (state.isFailed) {
           toastification.show(
             context: context, // optional if you use ToastificationWrapper
-            type: ToastificationType.success,
-            style: ToastificationStyle.flat,
+            type: ToastificationType.error,
+            style: ToastificationStyle.flatColored,
             autoCloseDuration: const Duration(seconds: 5),
-            title: Text('Hello, World!'),
+            title: H3(state.title ?? 'Failed loading reviews'),
+            description:
+                Paragraph(state.message ?? 'Please try again in a moment'),
           );
         }
       },
       builder: (context, state) {
         final reviews = state.reviews;
-        // if (state.isLoading) {
-          // return ListView.separated(
-          //   padding: const EdgeInsets.fromLTRB(24, 24, 24, 50),
-          //   itemBuilder: (context, index) {
-          //     final review = reviews.elementAt(index);
-          //     return ReviewCard(review: review);
-          //   },
-          //   separatorBuilder: (context, index) => SizedBox(height: 16),
-          //   itemCount: reviews.length,
-          // );
-        // }
+        if (state.isLoading) {
+          return ListView.separated(
+            padding: const EdgeInsets.fromLTRB(24, 24, 24, 50),
+            itemBuilder: (context, index) {
+              final review = reviews.elementAt(index);
+              return ReviewCard(review: review);
+            },
+            separatorBuilder: (context, index) => SizedBox(height: 16),
+            itemCount: reviews.length,
+          );
+        }
         if (state.isSucceed && reviews.isNotEmpty) {
           return Scrollbar(
             child: ListView.separated(
