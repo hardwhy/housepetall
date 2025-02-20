@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:housepetall/src/domain/domain.dart';
 import 'package:housepetall/src/localization/localization.dart';
 import 'package:housepetall/src/presentation/layouts/src/plain.dart';
 import 'package:housepetall/src/presentation/screen/review/cubits/review_list/review_list_cubit.dart';
@@ -15,17 +16,27 @@ class ReviewScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (context) => ReviewListCubit()..getReviews(),
-      child: PlainLayout(
-        withPadding: false,
-        title: context.strings.reviewHome,
-        footer: ReviewFooter(
-          onTap: () {
-            Navigator.pushNamed(context, ReviewRoutes.submit);
-          },
-          title: context.strings.reviewHomeSubmitButton,
-        ),
-        child: const ReviewList(),
+      create: (context) {
+        final usecase = context.read<GetReviewsUsecase>();
+        return ReviewListCubit(usecase)..getReviews();
+      },
+      child: Builder(
+        builder: (context) {
+          return PlainLayout(
+            withPadding: false,
+            title: context.strings.reviewHome,
+            footer: ReviewFooter(
+              onTap: () async {
+                await Navigator.pushNamed(context, ReviewRoutes.submit);
+                if (context.mounted) {
+                  context.read<ReviewListCubit>().getReviews();
+                }
+              },
+              title: context.strings.reviewHomeSubmitButton,
+            ),
+            child: const ReviewList(),
+          );
+        }
       ),
     );
   }

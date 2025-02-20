@@ -48,7 +48,10 @@ class ReviewSubmission extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (context) => ReviewSubmissionCubit(),
+      create: (context) {
+        final submitReviewUsecase = context.read<SubmitReviewUsecase>();
+        return ReviewSubmissionCubit(submitReviewUsecase);
+      },
       child: BlocListener<ReviewSubmissionCubit, ReviewSubmissionState>(
         listener: (context, state) {
           if (state.isLoading) {
@@ -56,7 +59,7 @@ class ReviewSubmission extends StatelessWidget {
           }
           if (state.isSucceed) {
             Navigator.pop(context);
-            showFailedSubmissionSheet(context: context);
+            showSuccessSubmissionSheet(context: context);
           }
           if (state.isFailed) {
             Navigator.pop(context);
