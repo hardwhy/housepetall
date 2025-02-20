@@ -43,3 +43,6 @@ flutter run -d ios
 ## 📘 Additional Information
 For troubleshooting tips, contributions, or further details, check out the project documentation or open an issue. Happy coding! 🎉
 
+## Attachments
+[App Preview](https://drive.google.com/file/d/1wikXDuCidO4rmtxororNyhyEXNBToHaZ/view?usp=sharing)
+
