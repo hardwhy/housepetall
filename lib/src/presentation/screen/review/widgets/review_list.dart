@@ -40,15 +40,22 @@ class ReviewList extends StatelessWidget {
           );
         }
         if (state.isSucceed && reviews.isNotEmpty) {
-          return Scrollbar(
-            child: ListView.separated(
-              padding: const EdgeInsets.fromLTRB(24, 24, 24, 50),
-              itemBuilder: (context, index) {
-                final review = reviews.elementAt(index);
-                return ReviewCard(review: review);
-              },
-              separatorBuilder: (context, index) => SizedBox(height: 16),
-              itemCount: reviews.length,
+          return RefreshIndicator(
+            color: Colors.deepOrange,
+            backgroundColor: Colors.white,
+            onRefresh: () async {
+              context.read<ReviewListCubit>().getReviews();
+            },
+            child: Scrollbar(
+              child: ListView.separated(
+                padding: const EdgeInsets.fromLTRB(24, 24, 24, 50),
+                itemBuilder: (context, index) {
+                  final review = reviews.elementAt(index);
+                  return ReviewCard(review: review);
+                },
+                separatorBuilder: (context, index) => SizedBox(height: 16),
+                itemCount: reviews.length,
+              ),
             ),
           );
         }
