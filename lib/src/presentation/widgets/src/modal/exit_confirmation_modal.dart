@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:housepetall/src/localization/localization.dart';
 import 'package:housepetall/src/presentation/screen/review/review_constants.dart';
 import 'package:housepetall/src/presentation/widgets/widgets.dart';

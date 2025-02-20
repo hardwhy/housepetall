@@ -32,16 +32,16 @@ class Input extends StatelessWidget {
             margin: const EdgeInsets.only(bottom: 8),
             child: Row(
               children: [
-                Body1.bold(label!),
+                Paragraph.bold(label!),
                 if (mandatory)
-                  Body1.bold(
+                  Paragraph.bold(
                     '*',
                     color: Colors.red,
                   )
                 else
                   Padding(
                     padding: const EdgeInsets.only(left: 4.0),
-                    child: Body1.bold(
+                    child: Paragraph.bold(
                       context.strings.commonOptionalLabel,
                       color: Colors.black38,
                     ),

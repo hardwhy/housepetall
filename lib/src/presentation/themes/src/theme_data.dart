@@ -16,7 +16,7 @@ class HousePetAllThemes {
       );
 
   static TextStyle get _defaultStyle => GoogleFonts.nunito(
-        fontSize: 16,
+        fontSize: 14,
         fontWeight: FontWeight.normal,
         color: Colors.black,
       );
@@ -55,7 +55,7 @@ class HousePetAllThemes {
       focusedErrorBorder: _errorBorder,
     ),
   );
-  
+
   static final darkBasic = ThemeData.dark(
     useMaterial3: true,
   );

@@ -28,12 +28,12 @@ class Empty extends StatelessWidget {
             height: imageSize ?? 300,
           ),
         const SizedBox(height: 8),
-        H1(
+        H2(
           title,
           color: Colors.deepOrange,
         ),
         if (description != null)
-          Body1(
+          Paragraph(
             description!,
             align: TextAlign.center,
           )
