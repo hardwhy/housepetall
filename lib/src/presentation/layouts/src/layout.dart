@@ -28,7 +28,7 @@ abstract class Layout extends StatelessWidget {
             Expanded(
               child: Padding(
                 padding: withPadding
-                    ? const EdgeInsets.fromLTRB(24, 24, 24, 50)
+                    ? const EdgeInsets.fromLTRB(24, 24, 24, 0)
                     : EdgeInsets.zero,
                 child: child,
               ),
