@@ -5,6 +5,7 @@ showLoadingModal({
 }) {
   showDialog(
     context: context,
+    barrierDismissible: false,
     builder: (context) {
       return Center(
         child: Container(
