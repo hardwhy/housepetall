@@ -73,11 +73,13 @@ class Body1 extends Typography {
         return GoogleFonts.nunito(
           fontSize: 18,
           fontWeight: FontWeight.bold,
+          color: color ?? Colors.black,
         );
       default:
         return GoogleFonts.nunito(
           fontSize: 18,
           fontWeight: FontWeight.normal,
+          color: color ?? Colors.black,
         );
     }
   }
@@ -110,13 +112,15 @@ class Paragraph extends Typography {
     switch (variantStyle) {
       case VariantStyle.bold:
         return GoogleFonts.nunito(
-          fontSize: 14,
+          fontSize: 16,
           fontWeight: FontWeight.bold,
+          color: color ?? Colors.black,
         );
       default:
         return GoogleFonts.nunito(
-          fontSize: 14,
+          fontSize: 16,
           fontWeight: FontWeight.normal,
+          color: color ?? Colors.black,
         );
     }
   }
@@ -138,6 +142,7 @@ class H1 extends Typography {
     return GoogleFonts.nunito(
       fontSize: 26,
       fontWeight: FontWeight.bold,
+      color: color ?? Colors.black,
     );
   }
 }
@@ -157,6 +162,7 @@ class H2 extends Typography {
     return GoogleFonts.nunito(
       fontSize: 24,
       fontWeight: FontWeight.bold,
+      color: color ?? Colors.black,
     );
   }
 }
@@ -176,6 +182,7 @@ class H3 extends Typography {
     return GoogleFonts.nunito(
       fontSize: 20,
       fontWeight: FontWeight.bold,
+      color: color ?? Colors.black,
     );
   }
 }
@@ -218,11 +225,13 @@ class ButtonTitle extends Typography {
         return GoogleFonts.nunito(
           fontSize: 18,
           fontWeight: FontWeight.bold,
+          color: color ?? Colors.black,
         );
       default:
         return GoogleFonts.nunito(
           fontSize: 16,
           fontWeight: FontWeight.normal,
+          color: color ?? Colors.black,
         );
     }
   }
