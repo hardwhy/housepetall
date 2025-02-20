@@ -4,11 +4,13 @@ class Review {
   final String ownerName;
   final String petName;
   final String? comment;
+  final String? id;
   Review({
     required this.rating,
     required this.ownerName,
     required this.petName,
     this.comment,
+    this.id,
   });
 
   Review copyWith({
@@ -27,7 +29,7 @@ class Review {
 
   @override
   String toString() {
-    return 'Review(rating: $rating, ownerName: $ownerName, petName: $petName, comment: $comment)';
+    return 'Review(rating: $rating, ownerName: $ownerName, petName: $petName, comment: $comment, id: $id)';
   }
 
   @override
@@ -38,7 +40,8 @@ class Review {
       other.rating == rating &&
       other.ownerName == ownerName &&
       other.petName == petName &&
-      other.comment == comment;
+      other.comment == comment &&
+      other.id == id;
   }
 
   @override
@@ -46,6 +49,7 @@ class Review {
     return rating.hashCode ^
       ownerName.hashCode ^
       petName.hashCode ^
-      comment.hashCode;
+      comment.hashCode ^
+      id.hashCode;
   }
 }
