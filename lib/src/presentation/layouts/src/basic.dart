@@ -8,7 +8,9 @@ class BasicLayout extends Layout {
     super.key,
     this.onBack,
     required super.child,
+    super.footer,
     super.title,
+    super.withPadding,
   });
 
   @override

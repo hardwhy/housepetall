@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:housepetall/src/localization/localization.dart';
 import 'package:housepetall/src/presentation/layouts/src/basic.dart';
+import 'package:housepetall/src/presentation/screen/review/widgets/footer.dart';
 import 'package:housepetall/src/presentation/screen/review/widgets/rating.dart';
 import 'package:housepetall/src/presentation/widgets/widgets.dart';
 
@@ -11,11 +12,15 @@ class ReviewSubmission extends StatelessWidget {
   Widget build(BuildContext context) {
     return BasicLayout(
       title: context.strings.reviewFormTitle,
+      footer: ReviewFooter(
+        onTap: () {},
+        title: context.strings.reviewFormSubmitButton,
+      ),
       child: Form(
         child: Column(
           children: [
             Container(
-              margin: const EdgeInsets.only(bottom: 16),
+              margin: const EdgeInsets.only(bottom: 24),
               child: Rating.input(
                 onTap: (value) {},
               ),
@@ -39,13 +44,13 @@ class ReviewSubmission extends StatelessWidget {
                 )
               ],
             ),
-            SizedBox(height: 16),
+            SizedBox(height: 24),
             Input(
               label: context.strings.reviewFormCommentLabel,
               placeholder: context.strings.reviewFormCommentPlaceHolder,
               minLine: 5,
               maxLine: null,
-            )
+            ),
           ],
         ),
       ),

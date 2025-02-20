@@ -7,12 +7,14 @@ class PlainLayout extends Layout {
     super.key,
     required super.child,
     super.title,
+    super.withPadding,
+    super.footer,
   });
 
   @override
   PreferredSizeWidget appBarBuilder() {
     return TopBar(
-      withBack: true,
+      withBack: false,
       title: title,
     );
   }
