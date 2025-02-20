@@ -11,7 +11,7 @@ showFailedSubmissionSheet({required BuildContext context}) {
       children: [
         Empty(
           imageAsset: ReviewConstants.assets.empty,
-          imageSize: 200,
+          imageSize: 250,
           title: context.strings.commonErrorTitle,
           description: context.strings.reviewFormFailedSubmitMessage,
         ),
@@ -28,7 +28,7 @@ showFailedSubmissionSheet({required BuildContext context}) {
   );
 }
 
-showSuccessSubmissionSheet({required BuildContext context}){
+showSuccessSubmissionSheet({required BuildContext context}) {
   showSheet(
     context,
     isDismissible: false,
@@ -36,7 +36,7 @@ showSuccessSubmissionSheet({required BuildContext context}){
       children: [
         Empty(
           imageAsset: ReviewConstants.assets.success,
-          imageSize: 200,
+          imageSize: 250,
           title: context.strings.reviewFormSucceedSubmitTitle,
           description: context.strings.reviewFormSucceedSubmitMessage,
         ),
@@ -46,7 +46,7 @@ showSuccessSubmissionSheet({required BuildContext context}){
           title: context.strings.reviewFormSucceedSubmitButtonTitle,
           onTap: () {
             Navigator.pop(context);
-            Navigator.pop(context);
+            Navigator.pop(context, true);
           },
         )
       ],
