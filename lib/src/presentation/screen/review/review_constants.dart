@@ -9,6 +9,7 @@ class _ReviewAssetPath {
   String get empty => '$root/empty.svg';
   String get detail => '$root/detail.svg';
   String get success => '$root/success.svg';
+  String get quit => '$root/quit.svg';
 }
 
 class _ReviewHeroTags {

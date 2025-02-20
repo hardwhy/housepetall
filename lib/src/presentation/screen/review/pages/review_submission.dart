@@ -7,6 +7,7 @@ import 'package:housepetall/src/localization/localization.dart';
 import 'package:housepetall/src/presentation/layouts/src/basic.dart';
 import 'package:housepetall/src/presentation/screen/review/cubits/review_submission/review_submission_cubit.dart';
 import 'package:housepetall/src/presentation/screen/review/widgets/widgets.dart';
+import 'package:housepetall/src/presentation/widgets/src/modal/exit_confirmation_modal.dart';
 import 'package:housepetall/src/presentation/widgets/widgets.dart';
 
 class DirtyFormState {
@@ -149,6 +150,13 @@ class _ReviewSubmissionState extends State<_ReviewSubmission> {
   @override
   Widget build(BuildContext context) {
     return BasicLayout(
+      onBack: () {
+        if (_dirty.value.isDirty) {
+          showExitConfirmationSheet(context: context);
+          return;
+        }
+        Navigator.pop(context);
+      },
       title: context.strings.reviewFormTitle,
       footer: ValueListenableBuilder(
           valueListenable: _dirty,

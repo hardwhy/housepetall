@@ -244,6 +244,30 @@ abstract class HousePetAllLocalization {
   /// In en, this message translates to:
   /// **'(optional)'**
   String get commonOptionalLabel;
+
+  /// No description provided for @commonButtonTitleYes.
+  ///
+  /// In en, this message translates to:
+  /// **'Yes, I mean it'**
+  String get commonButtonTitleYes;
+
+  /// No description provided for @commonButtonTitleNo.
+  ///
+  /// In en, this message translates to:
+  /// **'No, just kidding'**
+  String get commonButtonTitleNo;
+
+  /// No description provided for @commonExitConfirmationTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Are you sure?'**
+  String get commonExitConfirmationTitle;
+
+  /// No description provided for @commonExitConfirmationMessage.
+  ///
+  /// In en, this message translates to:
+  /// **'You are about to leave this page'**
+  String get commonExitConfirmationMessage;
 }
 
 class _HousePetAllLocalizationDelegate extends LocalizationsDelegate<HousePetAllLocalization> {

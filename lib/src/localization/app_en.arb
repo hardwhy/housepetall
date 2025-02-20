@@ -23,11 +23,15 @@
   "reviewFormCommentLabel": "Comment",
   "reviewFormRequiredError": "This field is required",
   "reviewFormSucceedSubmitTitle": "Review has been submitted",
-"reviewFormSucceedSubmitButtonTitle": "Go Home",
+  "reviewFormSucceedSubmitButtonTitle": "Go Home",
   "reviewFormSucceedSubmitMessage": "Your review is meaningful for us!",
   "reviewFormFailedSubmitMessage": "Please try to re-submit!",
   "reviewFormFailedSubmitButtonTitle": "Close",
   "commonErrorTitle": "Something went wrong",
   "commonErrorDescription": "I wish I had enough time to finish this page. :(",
-  "commonOptionalLabel": "(optional)"
+  "commonOptionalLabel": "(optional)",
+  "commonButtonTitleYes": "Yes, I mean it",
+  "commonButtonTitleNo": "No, just kidding",
+  "commonExitConfirmationTitle": "Are you sure?",
+  "commonExitConfirmationMessage": "You are about to leave this page"
 }

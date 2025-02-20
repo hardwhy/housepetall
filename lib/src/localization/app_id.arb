@@ -29,5 +29,9 @@
     "reviewFormTitle": "Berikan Ulasan",
     "commonErrorTitle": "Terjadi kesalahan",
     "commonErrorDescription": "Andai ada injury time. :(",
-    "commonOptionalLabel": "(opsional)"
+    "commonOptionalLabel": "(opsional)",
+    "commonButtonTitleYes": "Yes, I mean it",
+    "commonButtonTitleNo": "No, just kidding",
+    "commonExitConfirmationTitle": "Are you sure?",
+    "commonExitConfirmationMessage": "You are about to leave this page"
 }

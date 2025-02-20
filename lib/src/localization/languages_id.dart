@@ -80,4 +80,16 @@ class HousePetAllLocalizationId extends HousePetAllLocalization {
 
   @override
   String get commonOptionalLabel => '(opsional)';
+
+  @override
+  String get commonButtonTitleYes => 'Yes, I mean it';
+
+  @override
+  String get commonButtonTitleNo => 'No, just kidding';
+
+  @override
+  String get commonExitConfirmationTitle => 'Are you sure?';
+
+  @override
+  String get commonExitConfirmationMessage => 'You are about to leave this page';
 }
