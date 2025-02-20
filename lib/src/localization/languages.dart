@@ -218,7 +218,7 @@ abstract class HousePetAllLocalization {
   /// No description provided for @reviewFormFailedSubmitMessage.
   ///
   /// In en, this message translates to:
-  /// **'Please try to re-submit!'**
+  /// **'We\'re having some technical difficulties. \nPlease try to re-submit!'**
   String get reviewFormFailedSubmitMessage;
 
   /// No description provided for @reviewFormFailedSubmitButtonTitle.

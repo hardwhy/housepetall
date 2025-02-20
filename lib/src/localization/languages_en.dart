@@ -67,7 +67,7 @@ class HousePetAllLocalizationEn extends HousePetAllLocalization {
   String get reviewFormSucceedSubmitMessage => 'Your review is meaningful for us!';
 
   @override
-  String get reviewFormFailedSubmitMessage => 'Please try to re-submit!';
+  String get reviewFormFailedSubmitMessage => 'We\'re having some technical difficulties. \nPlease try to re-submit!';
 
   @override
   String get reviewFormFailedSubmitButtonTitle => 'Close';
