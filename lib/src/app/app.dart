@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:housepetall/src/app/injection_providers.dart';
 import 'package:housepetall/src/app/routes.dart';
 import 'package:housepetall/src/app/routing.dart';
 import 'package:housepetall/src/common/common.dart';
@@ -15,24 +16,26 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ToastificationWrapper(
-      child: MaterialApp(
-        restorationScopeId: 'app',
-        localizationsDelegates: const [
-          GlobalMaterialLocalizations.delegate,
-          GlobalWidgetsLocalizations.delegate,
-          GlobalCupertinoLocalizations.delegate,
-          HousePetAllLocalization.delegate,
-        ],
-        supportedLocales: [
-          HousePetAllLocale.en,
-          HousePetAllLocale.id,
-        ],
-        onGenerateTitle: (BuildContext context) =>
-            HousePetAllLocalization.of(context)!.appTitle,
-        theme: HousePetAllThemes.basic,
-        darkTheme: HousePetAllThemes.darkBasic,
-        onGenerateRoute: generateRoute,
-        initialRoute: Routes.root,
+      child: InjectionProviders(
+        child: MaterialApp(
+          restorationScopeId: 'app',
+          localizationsDelegates: const [
+            GlobalMaterialLocalizations.delegate,
+            GlobalWidgetsLocalizations.delegate,
+            GlobalCupertinoLocalizations.delegate,
+            HousePetAllLocalization.delegate,
+          ],
+          supportedLocales: [
+            HousePetAllLocale.en,
+            HousePetAllLocale.id,
+          ],
+          onGenerateTitle: (BuildContext context) =>
+              HousePetAllLocalization.of(context)!.appTitle,
+          theme: HousePetAllThemes.basic,
+          darkTheme: HousePetAllThemes.darkBasic,
+          onGenerateRoute: generateRoute,
+          initialRoute: Routes.root,
+        ),
       ),
     );
   }
