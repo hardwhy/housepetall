@@ -30,6 +30,8 @@ class ReviewSubmissionCubit extends Cubit<ReviewSubmissionState> {
         message: e.message,
         title: e.errorType?.message,
       ));
+    } catch (e) {
+      emit(state.copyWith(state: st.State.failed));
     }
   }
 }

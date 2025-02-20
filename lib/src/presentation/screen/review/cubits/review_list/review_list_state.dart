@@ -30,13 +30,14 @@ class ReviewListState extends StateFlag {
   @override
   bool operator ==(covariant ReviewListState other) {
     if (identical(this, other)) return true;
-  
-    return 
-      listEquals(other.reviews, reviews) &&
-      other.message == message &&
-      other.title == title;
+
+    return listEquals(other.reviews, reviews) &&
+        other.message == message &&
+        other.state == state &&
+        other.title == title;
   }
 
   @override
-  int get hashCode => reviews.hashCode ^ message.hashCode ^ title.hashCode;
+  int get hashCode =>
+      reviews.hashCode ^ message.hashCode ^ title.hashCode ^ state.hashCode;
 }

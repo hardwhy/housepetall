@@ -33,11 +33,13 @@ class ReviewSubmissionState extends st.StateFlag {
 
     return other.message == message &&
         other.title == title &&
+        other.state == state &&
         other.review == review;
   }
 
   @override
-  int get hashCode => message.hashCode ^ title.hashCode ^ review.hashCode;
+  int get hashCode =>
+      message.hashCode ^ title.hashCode ^ review.hashCode ^ state.hashCode;
 
   @override
   String toString() =>
