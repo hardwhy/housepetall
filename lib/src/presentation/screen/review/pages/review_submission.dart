@@ -183,7 +183,7 @@ class _ReviewSubmissionState extends State<_ReviewSubmission> {
                     }
                     return null;
                   },
-                  onSaved: (value) {
+                  onChanged: (value) {
                     _updateDirtyValue(_reviewValues.copyWith(rating: value));
                   },
                 ),

@@ -5,12 +5,14 @@ import 'package:housepetall/src/presentation/widgets/widgets.dart';
 enum RatingType { input, none }
 
 class RatingFormField extends FormField<int> {
+  final void Function(int?)? onChanged;
   RatingFormField({
     super.key,
     int initialValue = 0,
     super.enabled = true,
     super.onSaved,
     super.validator,
+    this.onChanged,
     AutovalidateMode autovalidateMode = AutovalidateMode.onUserInteraction,
   }) : super(
           initialValue: initialValue,
@@ -20,6 +22,7 @@ class RatingFormField extends FormField<int> {
               rating: field.value ?? 0,
               onTap: (value) {
                 field.didChange(value);
+                onChanged?.call(value);
               },
               errorText: field.errorText,
             );
