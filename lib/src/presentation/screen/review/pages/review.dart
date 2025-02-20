@@ -20,24 +20,25 @@ class ReviewScreen extends StatelessWidget {
         final usecase = context.read<GetReviewsUsecase>();
         return ReviewListCubit(usecase)..getReviews();
       },
-      child: Builder(
-        builder: (context) {
-          return PlainLayout(
-            withPadding: false,
-            title: context.strings.reviewHome,
-            footer: ReviewFooter(
-              onTap: () async {
-                await Navigator.pushNamed(context, ReviewRoutes.submit);
-                if (context.mounted) {
-                  context.read<ReviewListCubit>().getReviews();
-                }
-              },
-              title: context.strings.reviewHomeSubmitButton,
-            ),
-            child: const ReviewList(),
-          );
-        }
-      ),
+      child: Builder(builder: (context) {
+        return PlainLayout(
+          withPadding: false,
+          title: context.strings.reviewHome,
+          footer: ReviewFooter(
+            onTap: () async {
+              final result = await Navigator.pushNamed(
+                context,
+                ReviewRoutes.submit,
+              );
+              if (context.mounted && result != null && result as bool) {
+                context.read<ReviewListCubit>().getReviews();
+              }
+            },
+            title: context.strings.reviewHomeSubmitButton,
+          ),
+          child: const ReviewList(),
+        );
+      }),
     );
   }
 }
