@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:housepetall/src/localization/localization.dart';
-import 'package:housepetall/src/presentation/screen/review/asset_path.dart';
+import 'package:housepetall/src/presentation/screen/review/review_constants.dart';
 import 'package:housepetall/src/presentation/widgets/widgets.dart';
 
 class EmptyReviews extends StatelessWidget {
@@ -12,7 +12,7 @@ class EmptyReviews extends StatelessWidget {
       alignment: Alignment(0, -.3),
       child: Empty(
         imageSize: 300,
-        imageAsset: ReviewAssetPath.empty,
+        imageAsset: ReviewConstants.assets.empty,
         title: context.strings.reviewHomeEmptyTitle,
         description: context.strings.reviewHomeEmptyDescription,
       ),
