@@ -8,6 +8,7 @@ part 'review_list_state.dart';
 final dummyReviews = List.generate(5, (index) {
   final id = index + 1;
   return Review(
+      id: '$id',
       rating: id,
       ownerName: 'Owner #$id',
       petName: 'Anabul #$id',
