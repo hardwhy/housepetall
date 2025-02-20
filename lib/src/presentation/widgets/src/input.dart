@@ -55,6 +55,10 @@ class Input extends StatelessWidget {
           minLines: minLine,
           maxLines: maxLine,
           validator: validator,
+          style: Theme.of(context)
+              .inputDecorationTheme
+              .hintStyle!
+              .copyWith(color: Colors.black),
           decoration: InputDecoration(
             contentPadding: const EdgeInsets.symmetric(
               horizontal: 8,
