@@ -20,7 +20,6 @@ class ReviewListCubit extends Cubit<ReviewListState> {
     } on APIError catch (e) {
       emit(state.copyWith(
         state: State.failed,
-        reviews: [],
         message: e.message,
         title: e.errorType?.message,
       ));

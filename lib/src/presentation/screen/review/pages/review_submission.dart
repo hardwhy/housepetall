@@ -63,7 +63,10 @@ class ReviewSubmission extends StatelessWidget {
           }
           if (state.isFailed) {
             Navigator.pop(context);
-            showFailedSubmissionSheet(context: context);
+            showFailedSubmissionSheet(
+              context: context,
+              message: state.message,
+            );
           }
         },
         child: const _ReviewSubmission(),

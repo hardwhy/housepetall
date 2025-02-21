@@ -30,8 +30,8 @@ mixin DioWrapper {
           errorType = NetworkError.unknownError;
         }
 
-        if (ex.response!.data['message'] != null) {
-          final backendResponse = ex.response!.data['message'];
+        if (ex.response!.data['error'] != null) {
+          final backendResponse = ex.response!.data['error'];
           errorMessage = backendResponse;
         } else {
           errorMessage = ex.message;
