@@ -14,7 +14,7 @@ abstract class Layout extends StatelessWidget {
     this.footer,
   });
 
-  PreferredSizeWidget appBarBuilder();
+  PreferredSizeWidget? appBarBuilder();
 
   @override
   Widget build(BuildContext context) {

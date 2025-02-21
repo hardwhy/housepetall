@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 120">
+    <!-- House shape with rounded corners - shifted up slightly -->
+    <path
+        d="M50 10 
+           L78 29 
+           Q80 30, 80 32
+           L80 68
+           Q80 70, 78 70
+           L22 70
+           Q20 70, 20 68
+           L20 32
+           Q20 30, 22 29 Z"
+        fill="#FF5722" />
+
+    <!-- Cat head - rounded shape -->
+    <path
+        d="M50 30 
+           C62 30, 68 40, 68 45
+           C68 55, 60 60, 50 60
+           C40 60, 32 55, 32 45
+           C32 40, 38 30, 50 30"
+        fill="#333333" />
+
+    <!-- Medical Cross - integrated with cat head -->
+    <path d="M50 35
+           L50 55
+           M40 45
+           L60 45"
+        stroke="white"
+        stroke-width="4"
+        stroke-linecap="round" />
+
+    <!-- Cat ears - smoother -->
+    <path d="M35 35 
+           Q32 27, 40 30"
+        fill="#333333" />
+    <path d="M65 35 
+           Q68 27, 60 30"
+        fill="#333333" />
+
+    <!-- Cat eyes -->
+    <circle cx="43" cy="40" r="2" fill="white" />
+    <circle cx="57" cy="40" r="2" fill="white" />
+
+    <!-- Cat nose -->
+    <path d="M48 47 
+           Q50 47, 52 47
+           L50 49 Z"
+        fill="#FF5722" />
+
+    <!-- Whiskers - refined -->
+    <g stroke="#666666" stroke-width="1.5" stroke-linecap="round">
+        <line x1="35" y1="45" x2="25" y2="43" />
+        <line x1="35" y1="47" x2="25" y2="47" />
+        <line x1="35" y1="49" x2="25" y2="51" />
+
+        <line x1="65" y1="45" x2="75" y2="43" />
+        <line x1="65" y1="47" x2="75" y2="47" />
+        <line x1="65" y1="49" x2="75" y2="51" />
+    </g>
+
+    <!-- App Name -->
+    <text x="50" y="95"
+        font-family="Nunito, sans-serif"
+        font-size="14"
+        font-weight="700"
+        text-anchor="middle"
+        fill="#333333">
+        HousePetAll
+    </text>
+</svg>

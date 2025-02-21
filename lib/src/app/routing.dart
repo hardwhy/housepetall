@@ -3,6 +3,7 @@ import 'package:housepetall/src/presentation/screen/errors/not_found.dart';
 import 'package:housepetall/src/presentation/screen/review/pages/review.dart';
 import 'package:housepetall/src/presentation/screen/review/pages/review_detail.dart';
 import 'package:housepetall/src/presentation/screen/review/pages/review_submission.dart';
+import 'package:housepetall/src/presentation/screen/splash/splash.dart';
 
 import 'routes.dart';
 
@@ -15,6 +16,7 @@ MaterialPageRoute<void> generateRoute(RouteSettings routeSettings) {
     builder: (BuildContext context) {
       switch (routeName) {
         case Routes.root:
+          return const SplashScreen();
         case ReviewRoutes.root:
           return const ReviewScreen();
         case ReviewRoutes.detail:
