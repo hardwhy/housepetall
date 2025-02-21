@@ -89,7 +89,6 @@ class HeaderSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    print(_review);
     return Hero(
       tag: sprintf(
         ReviewConstants.heroTags.reviewContent,
