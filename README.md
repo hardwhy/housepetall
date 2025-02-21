@@ -19,7 +19,7 @@ Configure the required environment variables before running the project. The `ho
 ```dart
 // lib/config.dart
 class Config {
-  static const String host = '192.168.1.11:3000';
+  static const String host = 'http://192.168.1.11:3000';
 }
 ```
 
