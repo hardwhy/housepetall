@@ -12,9 +12,9 @@ Ensure you have the following installed:
 
 ### 🔧 Environment Variables
 Configure the required environment variables before running the project. The `HOST` should be set to your laptop's IP address for API access. Example:
-```bash
+```dart
 class Config {
-  static const String host = 'your_laptop_ip_address';
+  static const String host = 'your_laptop_ip_address:300';
 }
 ```
 
