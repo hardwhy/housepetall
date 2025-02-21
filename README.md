@@ -1,5 +1,9 @@
 # 📱 Housepetall Mobile App
 
+<p align="center">
+  <img src="assets/images/app_logo.svg" alt="Housepetall Logo" width="300">
+</p>
+
 ## 📌 Description
 Welcome to the **Housepetall Mobile App** repository! This project provides the Flutter-based mobile application for Housepetall, seamlessly integrating with the Housepetall API.
 
