@@ -3,7 +3,11 @@ import 'package:housepetall/src/localization/localization.dart';
 import 'package:housepetall/src/presentation/screen/review/review_constants.dart';
 import 'package:housepetall/src/presentation/widgets/widgets.dart';
 
-showFailedSubmissionSheet({required BuildContext context}) {
+showFailedSubmissionSheet({
+  required BuildContext context,
+  String? title,
+  String? message,
+}) {
   showSheet(
     context,
     isDismissible: false,
