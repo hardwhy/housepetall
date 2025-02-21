@@ -11,10 +11,11 @@ Ensure you have the following installed:
 - **Android Studio/Xcode (for Android/iOS development)**
 
 ### 🔧 Environment Variables
-Configure the required environment variables before running the project. The `HOST` should be set to your laptop's IP address for API access. Example:
+Configure the required environment variables before running the project. The `host` should be set to your laptop's IP address for API access. Example:
 ```dart
+// lib/config.dart
 class Config {
-  static const String host = 'your_laptop_ip_address:300';
+  static const String host = '192.168.1.11:3000';
 }
 ```
 
